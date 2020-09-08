@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "638707789551",
+    "firebase_url": "https://costapp-931b3.firebaseio.com",
+    "project_id": "costapp-931b3",
+    "storage_bucket": "costapp-931b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638707789551:android:8979a54bd72ab85d11f51a",
+        "android_client_info": {
+          "package_name": "com.iotecksolutions.todoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638707789551-vhkupdp3t8bn07kru33ctjrnklu1hnp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_HMeZ8-q1ed-dScv3rL5vnLoHQznHRFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638707789551-vhkupdp3t8bn07kru33ctjrnklu1hnp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

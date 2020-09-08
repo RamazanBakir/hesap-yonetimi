@@ -15,6 +15,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_auth: ^0.18.0+1
+  fluttertoast: ^7.0.4
+  cloud_firestore: ^0.14.0+2
+
 
   flutter_localizations:
     sdk: flutter
@@ -68,6 +72,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The following adds the launcher icon support to your application.
   # run below mentioned commands to generate launcher icons

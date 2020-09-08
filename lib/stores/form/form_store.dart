@@ -1,6 +1,8 @@
 import 'package:boilerplate/stores/error/error_store.dart';
 import 'package:mobx/mobx.dart';
 import 'package:validators/validators.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 part 'form_store.g.dart';
 
@@ -46,7 +48,9 @@ abstract class _FormStore with Store {
 
   @computed
   bool get canLogin =>
-      !formErrorStore.hasErrorsInLogin && userEmail.isNotEmpty && password.isNotEmpty;
+      !formErrorStore.hasErrorsInLogin &&
+      userEmail.isNotEmpty &&
+      password.isNotEmpty;
 
   @computed
   bool get canRegister =>
@@ -114,12 +118,20 @@ abstract class _FormStore with Store {
   }
 
   @action
-  Future login() async {
+  Future login({String userEmail, String password}) async {
+    userEmail = userEmail;
+    password = password;
     loading = true;
 
     Future.delayed(Duration(milliseconds: 2000)).then((future) {
       loading = false;
       success = true;
+
+      FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: userEmail, password: password)
+          .then((user) {
+        //commment line
+      });
     }).catchError((e) {
       loading = false;
       success = false;

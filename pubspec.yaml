@@ -54,6 +54,9 @@ dependencies:
   # Material Dialog
   material_dialog: ^0.0.9
 
+  firebase_core: ^0.5.0
+  cloud_firestore: ^0.14.0+2
+
   # This package provides internationalization and localization facilities, including message
   # translation, plurals and genders, date/number formatting and parsing, and bidirectional text.
   intl: ^0.16.1

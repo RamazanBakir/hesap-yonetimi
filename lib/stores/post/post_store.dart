@@ -35,6 +35,13 @@ abstract class _PostStore with Store {
   @computed
   bool get loading => fetchPostsFuture.status == FutureStatus.pending;
 
+  @computed
+  bool isSuccess() {
+    return success == true;
+  }
+
+  @computed
+  bool get checkIsSuccess => success == true;
   // actions:-------------------------------------------------------------------
   @action
   Future getPosts() async {
